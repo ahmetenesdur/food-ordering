@@ -2,7 +2,7 @@ import React from 'react'
 
 function Title({ children, addClass }) {
     return (
-        <div className={`${addClass}`}>{children}</div>
+        <div className={`${addClass} font-dancing font-bold`}>{children}</div>
     )
 }
 

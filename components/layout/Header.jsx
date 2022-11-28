@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Logo from "../ui/Logo";
 import { FaUserAlt, FaShoppingCart, FaSearch } from "react-icons/fa";
-import OutsideClickHandler from 'react-outside-click-handler';
-import Title from "../ui/Title";
+import Search from "../ui/Search";
 
 function Header() {
   const [isSearch, setIsSearch] = useState(false);
+  console.log(isSearch);
 
   return (
     <div className="h-[5.5rem] bg-secondary">
@@ -50,13 +50,7 @@ function Header() {
           </a>
         </div>
       </div>
-      {isSearch && (
-        <OutsideClickHandler onOutsideClick={() => setIsSearch(false)}>
-          <div>
-            <Title addClass='text-9xl'>Search</Title>
-          </div>
-        </OutsideClickHandler>
-      )}
+      {isSearch && <Search setIsSearch={setIsSearch} />}
     </div>
   )
 }
