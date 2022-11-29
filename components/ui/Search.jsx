@@ -9,7 +9,7 @@ function Search({ setIsSearch }) {
         <div className="fixed top-0 left-0 w-screen h-screen z-50 after:content-[''] after:absolute after:top-0 after:left-0 after:w-screen after:h-screen after:bg-white grid after:opacity-30">
             <OutsideClickHandler onOutsideClick={() => setIsSearch(false)}>
                 <div className="w-full h-full flex justify-center items-center">
-                    <div className="relative z-50 w-[600px] h-[600px] bg-white border-2 rounded-lg p-5">
+                    <div className="relative z-50 md:w-[600px] w-[370px] bg-white border-2 rounded-3xl p-10">
                         <Title addClass='text-[40px] text-center'>Search</Title>
                         <input type="text" placeholder="Search..." className="w-full h-[50px] border-2 border-gray-300 rounded-lg my-5" />
                         <div>
