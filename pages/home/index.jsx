@@ -1,8 +1,11 @@
 import React from 'react'
+import Carousel from '../../components/ui/Carousel'
 
 function Home() {
     return (
-        <div className="text-red-600 font-dancing text-center text-3xl">Home</div>
+        <div>
+            <Carousel />
+        </div>
     )
 }
 
