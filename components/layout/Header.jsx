@@ -10,7 +10,6 @@ function Header() {
   const [isMenu, setIsMenu] = useState(false);
 
   const router = useRouter();
-  console.log(router.asPath);
 
   return (
     <div

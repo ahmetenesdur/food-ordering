@@ -23,7 +23,7 @@ body {
 }
 
 .slick-dots .slick-active div {
-  @apply bg-primary !w-5 !h-5;
+  @apply bg-primary !scale-125 !transition-all;
 }
 
 .slick-dots div {
