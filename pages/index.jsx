@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import About from '../components/About'
 import Header from '../components/layout/Header'
 import Home from './home'
 
@@ -12,6 +13,7 @@ export default function Index() {
       </Head>
       <Header />
       <Home />
+      <About />
     </div>
   )
 }
