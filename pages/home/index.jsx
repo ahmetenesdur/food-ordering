@@ -2,6 +2,8 @@ import React from 'react'
 import Campaigns from '../../components/Campaigns'
 import Carousel from '../../components/Carousel'
 import MenuWrapper from '../../components/product/MenuWrapper'
+import About from './../../components/About';
+import Reservation from '../../components/Reservation';
 
 function Home() {
     return (
@@ -9,6 +11,8 @@ function Home() {
             <Carousel />
             <Campaigns />
             <MenuWrapper />
+            <About />
+            <Reservation />
         </div>
     )
 }
