@@ -21,6 +21,7 @@ function Search({ setIsSearch }) {
                                             alt=""
                                             width={48}
                                             height={48}
+                                            sizes='(max-width: 768px) 36px, 44px'
                                         />
                                     </div>
                                     <span className='font-bold'>Good Pizza</span>
@@ -33,6 +34,7 @@ function Search({ setIsSearch }) {
                                             alt=""
                                             width={48}
                                             height={48}
+                                            sizes='(max-width: 768px) 36px, 44px'
                                         />
                                     </div>
                                     <span className='font-bold'>Good Pizza</span>
@@ -45,6 +47,7 @@ function Search({ setIsSearch }) {
                                             alt=""
                                             width={48}
                                             height={48}
+                                            sizes='(max-width: 768px) 36px, 44px'
                                         />
                                     </div>
                                     <span className='font-bold'>Good Pizza</span>
