@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import Slider from "react-slick";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 function customersItem({ imgSrc }) {
     return (
-        <div className='mt-5'>
+        <div className="mt-5 mx-4">
             <div className="p-6 bg-secondary text-white rounded-md">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam perspiciatis, id ad animi aspernatur explicabo in dignissimos aliquam, voluptates ea numquam iste consectetur! Perspiciatis similique aspernatur voluptas necessitatibus illo eligendi.</p>
                 <div className="flex flex-col mt-4">
