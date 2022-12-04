@@ -43,13 +43,14 @@ function Customers() {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
+                    // arrows: false,
                 },
             },
         ],
     };
 
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto my-20">
             <Title addClass={"text-[40px] text-center"}>What Says Our Customers</Title>
             <Slider {...settings}>
                 <CustomersItem imgSrc="/images/client1.jpg" />
