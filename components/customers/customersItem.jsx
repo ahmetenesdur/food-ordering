@@ -16,7 +16,7 @@ function customersItem({ imgSrc }) {
             <div className="relative w-28 h-28 border-4 border-primary rounded-full mt-8 before:content-[''] before:absolute before:top-0 flex justify-center before:-translate-y-3 before:rotate-45 before:bg-primary before:w-5 before:h-5 ">
                 <Image
                     src={imgSrc}
-                    alt="customer"
+                    alt=""
                     layout="fill"
                     objectFit="contain"
                     className="rounded-full"
