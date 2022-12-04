@@ -32,7 +32,6 @@ function Carousel() {
                         alt=""
                         layout="fill"
                         objectFit="cover"
-                        sizes='(max-width: 768px) 300px, 445px'
                     />
                 </div>
             </div>

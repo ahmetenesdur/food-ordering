@@ -12,7 +12,6 @@ function About() {
                             src="/images/about-img.png"
                             alt=""
                             layout="fill"
-                            sizes='(max-width: 768px) 300px, 445px'
                         />
                     </div>
                 </div>

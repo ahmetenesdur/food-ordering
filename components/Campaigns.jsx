@@ -12,7 +12,6 @@ const CampaignItem = () => {
                     layout="fill"
                     className="hover:scale-105 transition-all duration-300"
                     objectFit="cover"
-                    sizes="(max-width: 768px) 36px, 44px"
                 />
             </div>
             <div className="text-white">

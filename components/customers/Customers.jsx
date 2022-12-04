@@ -1,10 +1,10 @@
-import React from 'react'
-import Title from './../ui/Title';
-import CustomersItem from './CustomersItem';
+import React from "react";
+import Title from "../ui/Title";
+import CustomerItem from "./CustomerItem";
 import Slider from "react-slick";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-function Customers() {
+const Customers = () => {
     function NextBtn({ onClick }) {
         return (
             <button
@@ -43,7 +43,6 @@ function Customers() {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    // arrows: false,
                 },
             },
         ],
@@ -51,15 +50,14 @@ function Customers() {
 
     return (
         <div className="container mx-auto my-20">
-            <Title addClass={"text-[40px] text-center"}>What Says Our Customers</Title>
+            <Title addClass="text-[40px] text-center">What Says Our Customers</Title>
             <Slider {...settings}>
-                <CustomersItem imgSrc="/images/client1.jpg" />
-                <CustomersItem imgSrc="/images/client2.jpg" />
-                <CustomersItem imgSrc="/images/client1.jpg" />
-                <CustomersItem imgSrc="/images/client2.jpg" />
+                <CustomerItem imgSrc="/images/client1.jpg" />
+                <CustomerItem imgSrc="/images/client2.jpg" />
+                <CustomerItem imgSrc="/images/client1.jpg" />
+                <CustomerItem imgSrc="/images/client2.jpg" />
             </Slider>
         </div>
-    )
-}
-
-export default Customers
+    );
+};
+export default Customers;

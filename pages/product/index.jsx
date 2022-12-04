@@ -10,7 +10,6 @@ function index() {
                     src="/images/f1.png"
                     alt="" layout="fill"
                     objectFit="contain"
-                    sizes="(max-width: 768px) 80%, 100%"
                 />
             </div>
             <div className="md:flex-1 md:text-start text-center">
@@ -30,7 +29,6 @@ function index() {
                                 src="/images/size.png"
                                 alt=""
                                 layout="fill"
-                                sizes='(max-width: 768px) 8px, 8px'
                             />
                             <span className="absolute top-0 -right-6 text-xs bg-primary rounded-full px-[5px] font-medium">
                                 Small
@@ -41,7 +39,6 @@ function index() {
                                 src="/images/size.png"
                                 alt=""
                                 layout="fill"
-                                sizes='(max-width: 768px) 12px, 12px'
                             />
                             <span className="absolute top-0 -right-6 text-xs bg-primary rounded-full px-[5px] font-medium">
                                 Medium
@@ -52,7 +49,6 @@ function index() {
                                 src="/images/size.png"
                                 alt=""
                                 layout="fill"
-                                sizes='(max-width: 768px) 16px, 16px'
                             />
                             <span className="absolute top-0 -right-6 text-xs bg-primary rounded-full px-[5px] font-medium">
                                 Large

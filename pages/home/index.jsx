@@ -8,14 +8,14 @@ import Customers from './../../components/customers/Customers';
 
 function Home() {
     return (
-        <React.Fragment>
+        <div>
             <Carousel />
             <Campaigns />
             <MenuWrapper />
             <About />
             <Reservation />
             <Customers />
-        </React.Fragment>
+        </div>
     )
 }
 

@@ -11,7 +11,6 @@ function MenuItem() {
                         src="/images/f1.png"
                         alt=""
                         layout="fill"
-                        sizes='(max-width: 768px) 36px, 44px'
                     />
                 </div>
             </div>
