@@ -1,24 +1,26 @@
-import React from 'react'
-import Input from './form/Input'
-import Title from './ui/Title'
-import { Formik, useFormik } from "formik";
+import Input from "./form/Input";
+import Title from "./ui/Title";
+import { useFormik } from "formik";
+import { reservationSchema } from "../schema/reservation";
 
-function Reservation() {
+const Reservation = () => {
     const onSubmit = async (values, actions) => {
         await new Promise((resolve) => setTimeout(resolve, 4000));
         actions.resetForm();
     };
 
-    const { values, handleSubmit, handleChange } = useFormik({
-        initialValues: {
-            fullName: "",
-            phoneNumber: "",
-            email: "",
-            persons: "",
-            date: "",
-        },
-        onSubmit,
-    });
+    const { values, errors, touched, handleSubmit, handleChange, handleBlur } =
+        useFormik({
+            initialValues: {
+                fullName: "",
+                phoneNumber: "",
+                email: "",
+                persons: "",
+                date: "",
+            },
+            onSubmit,
+            validationSchema: reservationSchema,
+        });
 
     const inputs = [
         {
@@ -27,6 +29,8 @@ function Reservation() {
             type: "text",
             placeholder: "Your Full Name",
             value: values.fullName,
+            errorMessage: errors.fullName,
+            touched: touched.fullName,
         },
         {
             id: 2,
@@ -34,6 +38,8 @@ function Reservation() {
             type: "number",
             placeholder: "Your Phone Number",
             value: values.phoneNumber,
+            errorMessage: errors.phoneNumber,
+            touched: touched.phoneNumber,
         },
         {
             id: 3,
@@ -41,6 +47,8 @@ function Reservation() {
             type: "email",
             placeholder: "Your Email Address",
             value: values.email,
+            errorMessage: errors.email,
+            touched: touched.email,
         },
         {
             id: 4,
@@ -48,13 +56,16 @@ function Reservation() {
             type: "number",
             placeholder: "How Many Persons?",
             value: values.persons,
+            errorMessage: errors.persons,
+            touched: touched.persons,
         },
         {
             id: 5,
             name: "date",
             type: "datetime-local",
-            placeholder: "Date & Time",
             value: values.date,
+            errorMessage: errors.date,
+            touched: touched.date,
         },
     ];
 
@@ -69,6 +80,7 @@ function Reservation() {
                                 key={input.id}
                                 {...input}
                                 onChange={handleChange}
+                                onBlur={handleBlur}
                             />
                         ))}
                     </div>
