@@ -48,12 +48,12 @@ function Header() {
           )}
         </nav>
         <div className="flex gap-x-4 items-center">
-          <a href="#">
+          <Link href="/auth/login">
             <FaUserAlt className="hover:text-primary cursor-pointer transition-all" />
-          </a>
-          <a href="#">
+          </Link>
+          <Link href="#">
             <FaShoppingCart className="hover:text-primary cursor-pointer transition-all" />
-          </a>
+          </Link>
           <button
             onClick={
               () => {
@@ -63,9 +63,9 @@ function Header() {
             }>
             <FaSearch className="hover:text-primary cursor-pointer transition-all" />
           </button>
-          <a href="#" className="md:inline-block hidden sm">
+          <Link href="#" className="md:inline-block hidden sm">
             <button className="btn-primary">Order Online</button>
-          </a>
+          </Link>
           <button
             className="sm:hidden inline-block"
             onClick={() => setIsMenu(true)}
