@@ -68,7 +68,7 @@ function index() {
                     </label>
                     <label className="flex items-center gap-x-1">
                         <input type="checkbox" className="w-5 h-5 accent-primary" />
-                        <span className="text-sm font-semibold">Bitter sauce</span>
+                        <span className="text-sm font-semibold">Hot sauce</span>
                     </label>
                 </div>
                 <button className="btn-primary">Add to Cart</button>

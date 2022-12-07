@@ -51,7 +51,7 @@ function Header() {
           <Link href="/auth/login">
             <FaUserAlt className="hover:text-primary cursor-pointer transition-all" />
           </Link>
-          <Link href="#">
+          <Link href="/cart">
             <FaShoppingCart className="hover:text-primary cursor-pointer transition-all" />
           </Link>
           <button
