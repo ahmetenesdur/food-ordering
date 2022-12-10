@@ -115,9 +115,11 @@ const Footer = () => {
                         className="btn-primary"
                         type="button"
                         onClick={() => {
-                            setIcons([...icons, iconName]);
-                            setIconName("fa-brands fa-");
-                            setLinkAddress("https://");
+                            if (linkAddress !== "https://" && iconName !== "fa-brands fa-") {
+                                setIcons((prev) => [...prev, iconName]);
+                                setLinkAddress("https://");
+                                setIconName("fa-brands fa-");
+                            }
                         }}
                     >
                         Add
