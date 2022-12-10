@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { useState } from "react";
+import Category from '../../components/admin/Category';
+import Orders from '../../components/admin/Orders';
 import Products from './../../components/admin/Products';
 
 
@@ -45,7 +47,7 @@ function Profile() {
                         className={`border w-full p-3 cursor-pointer hover:bg-primary hover:text-white transition-all ${tabs === 3 && "bg-primary text-white"
                             }`}
                         onClick={() => setTabs(3)}>
-                        <i className="fas fa-wrench"></i>
+                        <i className="fa fa-window-maximize"></i>
                         <button className='ml-1'>Footer</button>
                     </li>
                     <li
@@ -58,6 +60,8 @@ function Profile() {
                 </ul>
             </div>
             {tabs === 0 && <Products />}
+            {tabs === 1 && <Orders />}
+            {tabs === 2 && <Category />}
         </div>
     )
 }
