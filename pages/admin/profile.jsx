@@ -3,6 +3,7 @@ import { useState } from "react";
 import Category from '../../components/admin/Category';
 import Orders from '../../components/admin/Orders';
 import Products from './../../components/admin/Products';
+import Footers from './../../components/admin/Footers';
 
 
 function Profile() {
@@ -62,6 +63,7 @@ function Profile() {
             {tabs === 0 && <Products />}
             {tabs === 1 && <Orders />}
             {tabs === 2 && <Category />}
+            {tabs === 3 && <Footers />}
         </div>
     )
 }
