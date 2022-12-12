@@ -5,10 +5,13 @@ import Search from "../ui/Search";
 import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 function Header() {
   const [isSearch, setIsSearch] = useState(false);
   const [isMenu, setIsMenu] = useState(false);
+
+  const cart = useSelector((state) => state.cart);
 
   const router = useRouter();
 
@@ -21,9 +24,8 @@ function Header() {
           <Logo />
         </div>
         <nav
-          className={`sm:static absolute top-0 left-0 sm:w-auto sm:h-auto w-full h-screen sm:text-white text-black sm:bg-transparent bg-white sm:flex hidden  ${
-            isMenu === true && "!grid place-content-center"
-          }`}>
+          className={`sm:static absolute top-0 left-0 sm:w-auto sm:h-auto w-full h-screen sm:text-white text-black sm:bg-transparent bg-white sm:flex hidden  ${isMenu === true && "!grid place-content-center"
+            }`}>
           <ul className="flex gap-x-2 sm:flex-row flex-col items-center">
             <li className="px-[0.313rem] py-[0.625rem] uppercase hover:text-primary cursor-pointer">
               <Link href="/">Home</Link>
@@ -52,7 +54,12 @@ function Header() {
             <FaUserAlt className="hover:text-primary cursor-pointer transition-all" />
           </Link>
           <Link href="/cart">
-            <FaShoppingCart className="hover:text-primary cursor-pointer transition-all" />
+            <span className="relative">
+              <FaShoppingCart className="hover:text-primary cursor-pointer transition-all" />
+              <span className="-py-1 px-1 text-xs grid place-content-center rounded-full bg-primary absolute -top-2 -right-3 text-black font-bold">
+                {cart.products.length === 0 ? "0" : cart.products.length}
+              </span>
+            </span>
           </Link>
           <button
             onClick={

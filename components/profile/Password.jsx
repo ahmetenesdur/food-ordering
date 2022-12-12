@@ -8,7 +8,6 @@ function Password() {
     const onSubmit = async (values, actions) => {
         await new Promise((resolve) => setTimeout(resolve, 4000));
         actions.resetForm();
-        console.log("values", values);
     };
 
     const { values, errors, touched, handleSubmit, handleChange, handleBlur } =
