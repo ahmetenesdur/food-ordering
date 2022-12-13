@@ -32,7 +32,7 @@ const UserSchema = new mongoose.Schema(
             required: true,
         },
         emailVerified: {
-            type: string,
+            type: String,
             default: null,
         },
     },
