@@ -52,9 +52,9 @@ function Search({ setIsSearch }) {
                                 </li>
                             </ul>
                             <button>
-                                <GiCancel 
-                                className="text-2xl absolute top-5 right-5 cursor-pointer hover:text-primary"
-                                onClick={() => setIsSearch(false)}
+                                <GiCancel
+                                    className="text-2xl absolute top-5 right-5 cursor-pointer hover:text-primary"
+                                    onClick={() => setIsSearch(false)}
                                 />
                             </button>
                         </div>

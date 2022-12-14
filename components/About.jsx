@@ -11,7 +11,8 @@ function About() {
                         <Image
                             src="/images/about-img.png"
                             alt=""
-                            layout="fill"
+                            fill="layout"
+                            sizes="100%"
                         />
                     </div>
                 </div>

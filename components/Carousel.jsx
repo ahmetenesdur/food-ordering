@@ -30,8 +30,9 @@ function Carousel() {
                     <Image
                         src="/images/hero-bg.jpg"
                         alt=""
-                        layout="fill"
-                        objectFit="cover"
+                        fill="layout"
+                        sizes='%100'
+                        className="cover"
                     />
                 </div>
             </div>

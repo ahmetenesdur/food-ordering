@@ -76,8 +76,8 @@ function Index() {
             <div className="relative md:flex-1 md:w-[80%] md:h-[80%] w-36 h-36 mx-auto">
                 <Image src="/images/f1.png"
                     alt=""
-                    layout="fill"
-                    objectFit="contain"
+                    fill="layout"
+                    className="contain"
                 />
             </div>
             <div className="md:flex-1 md:text-start text-center">

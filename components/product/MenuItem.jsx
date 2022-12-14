@@ -11,7 +11,8 @@ function MenuItem() {
                         <Image
                             src="/images/f1.png"
                             alt=""
-                            layout="fill"
+                            fill="layout"
+                            sizes="100%"
                         />
                     </div>
                 </Link>

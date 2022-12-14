@@ -48,7 +48,7 @@ function Order() {
                             alt=""
                             width={40}
                             height={40}
-                            objectFit="contain"
+                            className="contain"
                         />
                         <span>Payment</span>
                     </div>
@@ -58,7 +58,7 @@ function Order() {
                             alt=""
                             width={40}
                             height={40}
-                            objectFit="contain"
+                            className="contain"
                         />
                         <span>Preparing</span>
                     </div>
@@ -68,7 +68,7 @@ function Order() {
                             alt=""
                             width={40}
                             height={40}
-                            objectFit="contain"
+                            className="contain"
                         />
                         <span>On the way</span>
                     </div>
@@ -78,7 +78,7 @@ function Order() {
                             alt=""
                             width={40}
                             height={40}
-                            objectFit="contain"
+                            className="contain"
                         />
                         <span>Delivered</span>
                     </div>

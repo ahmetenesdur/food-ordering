@@ -20,9 +20,8 @@ const CustomerItem = ({ imgSrc }) => {
                 <Image
                     src={imgSrc}
                     alt=""
-                    layout="fill"
-                    objectFit="contain"
-                    className="rounded-full"
+                    fill="layout"
+                    className="rounded-full contain"
                 />
             </div>
         </div>

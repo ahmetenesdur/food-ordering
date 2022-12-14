@@ -9,9 +9,9 @@ const CampaignItem = () => {
                 <Image
                     src="/images/o1.jpg"
                     alt=""
-                    layout="fill"
-                    className="hover:scale-105 transition-all duration-300"
-                    objectFit="cover"
+                    fill="layout"
+                    sizes="100%"
+                    className="hover:scale-105 transition-all duration-300 cover"
                 />
             </div>
             <div className="text-white">
