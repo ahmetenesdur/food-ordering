@@ -77,7 +77,7 @@ function Index() {
                 <Image src="/images/f1.png"
                     alt=""
                     fill="layout"
-                    className="contain"
+                    style={{ objectFit: "contain" }}
                 />
             </div>
             <div className="md:flex-1 md:text-start text-center">

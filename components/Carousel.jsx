@@ -31,8 +31,7 @@ function Carousel() {
                         src="/images/hero-bg.jpg"
                         alt=""
                         fill="layout"
-                        sizes='%100'
-                        className="cover"
+                        style={{ objectFit: "cover" }}
                     />
                 </div>
             </div>

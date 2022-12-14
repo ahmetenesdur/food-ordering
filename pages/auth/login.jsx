@@ -45,7 +45,7 @@ function Login() {
     ]
 
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto pt-10">
             <form
                 className="flex flex-col items-center my-20 md:w-1/2 w-full mx-auto"
                 onSubmit={handleSubmit}
