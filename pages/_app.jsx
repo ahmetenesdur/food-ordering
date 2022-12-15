@@ -9,6 +9,8 @@ import store from "../redux/store";
 
 import { SessionProvider } from "next-auth/react"
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function MyApp({
   Component,
@@ -18,6 +20,9 @@ function MyApp({
     <SessionProvider session={session}>
       <Provider store={store}>
         <Layout>
+          <ToastContainer
+            theme="dark"
+          />
           <Component {...pageProps} />
         </Layout>
       </Provider>
