@@ -32,7 +32,8 @@ function Products() {
                                 <Image
                                     src="/images/f1.png"
                                     alt=""
-                                    sizes='%100'
+                                    width={48}
+                                    height={48}
                                     className="rounded-full w-10 h-10"
                                 />
                             </td>
