@@ -3,13 +3,11 @@ import Link from 'next/link';
 import Input from './../../components/form/Input';
 import Title from './../../components/ui/Title';
 import { loginSchema } from './../../schema/login';
-import { useSession, signIn, getSession } from "next-auth/react";
-import { useEffect } from "react";
+import { signIn, getSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 
 function Login() {
-    const { data: session } = useSession()
     const { push } = useRouter();
 
     const onSubmit = async (values, actions) => {
@@ -20,7 +18,7 @@ function Login() {
             const res = await signIn("credentials", options);
             toast.success("Login successful");
             actions.resetForm();
-            push("/profile");
+            push("/profile/639f45733e1ce863e0832665");
         } catch (err) {
             toast.error(err.message);
         }
@@ -104,7 +102,7 @@ export async function getServerSideProps({ req }) {
     if (session) {
         return {
             redirect: {
-                destination: "/profile",
+                destination: "/profile/639f45733e1ce863e0832665",
                 permanent: false,
             },
         };
