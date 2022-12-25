@@ -3,12 +3,16 @@ import Link from 'next/link';
 import Input from './../../components/form/Input';
 import Title from './../../components/ui/Title';
 import { loginSchema } from './../../schema/login';
-import { signIn, getSession } from "next-auth/react";
+import { getSession, signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 function Login() {
+    const { data: session } = useSession();
     const { push } = useRouter();
+    const [currentUser, setCurrentUser] = useState();
 
     const onSubmit = async (values, actions) => {
         const { email, password } = values;
@@ -18,11 +22,25 @@ function Login() {
             const res = await signIn("credentials", options);
             toast.success("Login successful");
             actions.resetForm();
-            push("/profile/639f45733e1ce863e0832665");
         } catch (err) {
             toast.error(err.message);
         }
     };
+
+    useEffect(() => {
+        const getUser = async () => {
+            try {
+                const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/users`);
+                setCurrentUser(
+                    res.data?.find((user) => user.email === session?.user?.email)
+                );
+                push("/profile/" + currentUser?._id);
+            } catch (err) {
+                toast.error(err.message);
+            }
+        };
+        getUser();
+    }, [session, push, currentUser]);
 
     const { values, errors, touched, handleSubmit, handleChange, handleBlur } =
         useFormik({
@@ -99,10 +117,13 @@ function Login() {
 export async function getServerSideProps({ req }) {
     const session = await getSession({ req });
 
-    if (session) {
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/users`);
+    const user = res.data?.find((user) => user.email === session?.user.email);
+    if (session && user) {
+
         return {
             redirect: {
-                destination: "/profile/639f45733e1ce863e0832665",
+                destination: "/profile/" + user._id,
                 permanent: false,
             },
         };
