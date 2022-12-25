@@ -20,7 +20,11 @@ function Login() {
 
         try {
             const res = await signIn("credentials", options);
-            toast.success("Login successful");
+            if (res.status === 200){
+                toast.success("Login successful");
+            } else {
+                toast.error("Password is incorrect");
+            }
             actions.resetForm();
         } catch (err) {
             toast.error(err.message);

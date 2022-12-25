@@ -12,10 +12,10 @@ function Login() {
 
     const onSubmit = async (values, actions) => {
         try {
-            const rest = await axios.post(
+            const res = await axios.post(
                 `${process.env.NEXT_PUBLIC_API_URL}/admin`, values);
-            if (rest.status === 200) {
-                console.log(rest.data);
+            if (res.status === 200) {
+                console.log(res.data);
                 actions.resetForm();
                 toast.success("Admin Login Success!");
                 push("/admin/profile");

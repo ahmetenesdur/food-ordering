@@ -8,16 +8,16 @@ import { toast } from "react-toastify";
 
 function Account({ user }) {
     const onSubmit = async (values, actions) => {
-        await new Promise((resolve) => setTimeout(resolve, 4000));
         try {
             const res = await axios.put(
                 `${process.env.NEXT_PUBLIC_API_URL}/users/${user._id}`,
                 values
             );
-            actions.resetForm();
+            toast.success("Update successful");
         } catch (err) {
             toast.error(err.message);
         }
+        actions.resetForm();
     };
 
     const { values, errors, touched, handleSubmit, handleChange, handleBlur } =
