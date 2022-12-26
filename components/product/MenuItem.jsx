@@ -13,6 +13,7 @@ function MenuItem() {
                             alt=""
                             fill="layout"
                             sizes="100%"
+                            priority
                         />
                     </div>
                 </Link>

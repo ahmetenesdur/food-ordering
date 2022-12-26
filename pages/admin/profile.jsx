@@ -7,9 +7,11 @@ import Orders from '../../components/admin/Orders';
 import Products from './../../components/admin/Products';
 import Footers from './../../components/admin/Footers';
 import { toast } from 'react-toastify';
+import AddProduct from "../../components/admin/AddProduct";
 
 function Profile() {
     const [tabs, setTabs] = useState(0);
+    const [isProductModal, setIsProductModal] = useState(false);
 
     const { push } = useRouter();
 
@@ -83,6 +85,12 @@ function Profile() {
             {tabs === 1 && <Orders />}
             {tabs === 2 && <Category />}
             {tabs === 3 && <Footers />}
+            {isProductModal && <AddProduct setIsProductModal={setIsProductModal} />}
+            <button
+                className="btn-primary !w-12 !h-12 !p-0 absolute bottom-14 right-10 text-4xl"
+                onClick={() => setIsProductModal(true)}>
+                +
+            </button>
         </div>
     )
 }
