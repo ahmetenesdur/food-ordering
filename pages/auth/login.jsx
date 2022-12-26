@@ -20,7 +20,7 @@ function Login() {
 
         try {
             const res = await signIn("credentials", options);
-            if (res.status === 200){
+            if (res.status === 200) {
                 toast.success("Login successful");
             } else {
                 toast.error("Password is incorrect");
@@ -38,7 +38,7 @@ function Login() {
                 setCurrentUser(
                     res.data?.find((user) => user.email === session?.user?.email)
                 );
-                push("/profile/" + currentUser?._id);
+                session && push("/profile/" + currentUser?._id);
             } catch (err) {
                 toast.error(err.message);
             }
