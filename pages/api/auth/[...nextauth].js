@@ -41,7 +41,7 @@ export const authOptions = {
     // adapter: MongoDBAdapter(clientPromise),
     database: process.env.MONGODB_URI,
     secret: "secret",
-    debug: process.env.NODE_ENV === "development",
+    debug: process.env.NODE_ENV !== "production",
 }
 
 export default NextAuth(authOptions)
