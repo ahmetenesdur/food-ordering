@@ -6,12 +6,12 @@ import About from './../../components/About';
 import Reservation from '../../components/Reservation';
 import Customers from './../../components/customers/Customers';
 
-function Home({ categoryList }) {
+function Home({ categoryList, productList }) {
     return (
         <div>
             <Carousel />
             <Campaigns />
-            <MenuWrapper categoryList={categoryList} />
+            <MenuWrapper categoryList={categoryList} productList={productList} />
             <About />
             <Reservation />
             <Customers />
