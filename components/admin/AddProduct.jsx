@@ -160,7 +160,7 @@ const AddProduct = ({ setIsProductModal }) => {
 
                         <div className="flex flex-col text-sm mt-4 w-full">
                             <span className="font-semibold mb-[2px]">Prices</span>
-                            {category === "pizza" ? (
+                            {category === "pizza" || category === "drink" ? (
                                 <div className="flex justify-between gap-6 w-full md:flex-nowrap flex-wrap">
                                     <input
                                         type="number"
