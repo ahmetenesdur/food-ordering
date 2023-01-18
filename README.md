@@ -6,7 +6,7 @@ React, Next.js, TailwindCSS, Redux, Redux-Toolkit, Next-Auth, MongoDB, Postman, 
 
 To see the project in action, visit the following link:
 
-[![vercel](https://img.shields.io/badge/vercel-230?style=for-the-badge&logo=vercel&logoColor=white)](https://food-ordering-lac.vercel.app)
+[![vercel](https://img.shields.io/badge/vercel-230?style=for-the-badge&logo=vercel&logoColor=white)](https://food-ordering-green.vercel.app/)
 
 ## Quick start
 
