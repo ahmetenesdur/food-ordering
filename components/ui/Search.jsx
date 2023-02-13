@@ -20,7 +20,7 @@ function Search({ setIsSearch }) {
           `${process.env.NEXT_PUBLIC_API_URL}/products`
         );
         setProducts(res.data);
-        setFiltered(res.data.slice(0, 5));
+        setFiltered(res.data.slice(0, 4));
       } catch (err) {
         console.log(err);
       }
@@ -35,7 +35,7 @@ function Search({ setIsSearch }) {
       .filter((product) =>
         product.title.toLowerCase().includes(e.target.value.toLowerCase())
       )
-      .slice(0, 5);
+      .slice(0, 4);
     setFiltered(searchFilter);
   };
 
