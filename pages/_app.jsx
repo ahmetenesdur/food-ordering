@@ -18,22 +18,19 @@ Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
-function MyApp({
-  Component,
-  pageProps: { session, ...pageProps },
-}) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <SessionProvider session={session}>
       <Provider store={store}>
         <Layout>
-          <ToastContainer
-            theme="dark"
-          />
-          <Component {...pageProps} />
+          <div className="pt-[88px]">
+            <ToastContainer theme="dark" />
+            <Component {...pageProps} />
+          </div>
         </Layout>
       </Provider>
     </SessionProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
